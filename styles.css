@@ -219,6 +219,7 @@ a {
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .device-card,
@@ -235,6 +236,7 @@ a {
 .device-card {
   position: relative;
   width: min(460px, 100%);
+  aspect-ratio: 1 / 1;
   padding: 28px;
   border-radius: 36px;
   overflow: hidden;
@@ -352,31 +354,75 @@ a {
 
   .hero-grid {
     min-height: auto;
+    gap: 24px;
     padding-bottom: 20px;
   }
 
   .device-card {
-    max-width: 520px;
+    max-width: 420px;
   }
 
   .cta-card img {
     max-width: 180px;
   }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-points {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .section {
+    margin-top: 28px;
+  }
+
+  .cta-card {
+    justify-items: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 640px) {
   .page-shell {
-    width: min(100% - 20px, 1180px);
-    padding-top: 10px;
+    width: min(100% - 16px, 1180px);
+    padding-top: 8px;
+    padding-bottom: 28px;
   }
 
   .topbar {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 6px 0 18px;
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.8rem, 16vw, 4rem);
+    font-size: clamp(2.4rem, 13vw, 3.5rem);
+    line-height: 0.92;
+  }
+
+  .hero-text,
+  .info-card p,
+  .step-card p,
+  .tips-list,
+  .cta-copy p {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
   }
 
   .button,
@@ -397,6 +443,92 @@ a {
   }
 
   .device-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+  }
+
+  .device-card::before {
+    inset: 12px;
+    border-radius: 22px;
+  }
+
+  .phone-art {
+    width: min(72%, 250px);
+  }
+
+  .info-card,
+  .step-card {
     padding: 18px;
+  }
+
+  .tips-panel,
+  .cta-card {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2,
+  .tips-panel h2,
+  .cta-copy h2 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    line-height: 0.96;
+  }
+
+  .brand {
+    gap: 10px;
+    font-size: 1.05rem;
+  }
+
+  .brand img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .cta-card img {
+    max-width: 140px;
+  }
+
+  .hero-points li {
+    text-align: left;
+    padding-left: 26px;
+  }
+
+  .hero-points li::before {
+    top: 6px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-grid {
+    gap: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.1rem, 12vw, 2.8rem);
+  }
+
+  .hero-actions {
+    margin: 24px 0 20px;
+  }
+
+  .button {
+    min-height: 52px;
+    padding: 0 18px;
+    border-radius: 16px;
+  }
+
+  .device-card {
+    aspect-ratio: 0.95 / 1;
+  }
+
+  .phone-art {
+    width: min(74%, 220px);
   }
 }
