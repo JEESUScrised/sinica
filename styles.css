@@ -395,6 +395,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .hero-visual {
+    display: none;
+  }
+
   .page-shell {
     width: min(100% - 16px, 1180px);
     padding-top: 8px;
